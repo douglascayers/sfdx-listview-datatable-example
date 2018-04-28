@@ -1,0 +1,36 @@
+<!--
+/**
+ * Simple proof of concept apex class to retrieve sobject records
+ * per a list view filter id and display them in a lightning component.
+ *
+ * Inspired by Peter Churchill (https://twitter.com/britishboyindc/status/989969757104467969)
+ *
+ * Developed by Doug Ayers (douglascayers.com)
+ */
+ -->
+<aura:component implements="flexipage:availableForAllPageTypes" controller="ListViewDataTableController">
+
+    <!-- https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/aura_compref_lightning_datatable.htm -->
+
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+
+    <aura:attribute name="namedCredential" type="String"/>
+    <aura:attribute name="listViewId" type="String"/>
+
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+
+    <aura:if isTrue="{!not(empty(v.listViewId))}">
+
+        <lightning:spinner aura:id="spinner" variant="brand"/>
+
+        <lightning:datatable data="{! v.mydata }"
+                             columns="{! v.mycolumns }"
+                             keyField="fields.Id"
+                             hideCheckboxColumn="true"/>
+
+    </aura:if>
+
+</aura:component>

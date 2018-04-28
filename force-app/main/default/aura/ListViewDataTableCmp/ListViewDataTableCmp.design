@@ -1,0 +1,6 @@
+<design:component >
+
+    <design:attribute name="namedCredential" label="Named Credential" description="The Named Credential to auth to REST API"/>
+    <design:attribute name="listViewId" label="List View ID" description="ID of a List View Filter (00B)"/>
+
+</design:component>
