@@ -11,10 +11,10 @@ public class ListViewDataTableController {
     @AuraEnabled
     public static ListViewDataTable getListViewDataById( String namedCredential, ID listViewId ) {
 
-		ListViewDescribeResult result = getListViewDescribe( namedCredential, listViewId );
+        ListViewDescribeResult result = getListViewDescribe( namedCredential, listViewId );
 
         ApexPages.StandardSetController controller = new ApexPages.StandardSetController( Database.getQueryLocator( result.query ) );
-		//add pagination
+        //add pagination
         //controller.setPageNumber( 1 );
         //controller.setPageSize( 10 );
 
@@ -46,9 +46,9 @@ public class ListViewDataTableController {
         System.debug( res );
         System.debug( res.getBody() );
 
-		ListViewDescribeResult result = (ListViewDescribeResult) JSON.deserialize( res.getBody(), ListViewDescribeResult.class );
+        ListViewDescribeResult result = (ListViewDescribeResult) JSON.deserialize( res.getBody(), ListViewDescribeResult.class );
 
-		return result;
+        return result;
     }
 
     public class ListViewDataTable {
