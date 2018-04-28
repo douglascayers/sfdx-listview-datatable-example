@@ -38,7 +38,8 @@ sfdx force:user:password:generate
 
 5. Create some test records for an object and create a list view for them. Note the list view filter id in the browser's address bar (e.g. `00Bxxxxxxxxxxxx`)
 
-6. Use App Builder to add the custom component `ListViewDataTable` to a Lightning Page (e.g. a Home Page or Record Page). Specify the `List View ID` design attribute in App Builder.
+6. Use App Builder to add the custom component `ListViewDataTable` to a Lightning Page (e.g. a Home Page or Record Page).
+   Specify the `Named Credential` and `List View ID` design attributes in App Builder.
 
 
 # Inpsiration
