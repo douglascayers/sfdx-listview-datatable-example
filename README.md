@@ -41,6 +41,8 @@ sfdx force:user:password:generate
 6. Use App Builder to add the custom component `ListViewDataTable` to a Lightning Page (e.g. a Home Page or Record Page).
    Specify the `Named Credential` and `List View ID` design attributes in App Builder.
 
+   ![screen shot](/images/appbuilder-configure-component.png)
+
 
 # Inpsiration
 
